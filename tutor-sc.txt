@@ -725,8 +725,10 @@
 
   为 Emacs+Evil 改编（基于 vimtutor 1.5）：Sylvain Benner。
   
+  当前：
+
   为简体中文翻译、为提升质量而改编：clsty <ph-tyhu@outlook.com>。
-  当前项目地址：https://github.com/clsty/evil-tutor-sc
+  项目地址：https://github.com/clsty/evil-tutor-sc
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
