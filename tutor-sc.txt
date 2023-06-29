@@ -1,12 +1,12 @@
 ===============================================================================
-=         欢    迎    来    到       E m a c s   E v i l      教    程        =
+=        欢   迎   来   到    E m a c s    E v i l    中   文   教   程       =
 =                                                                             =
 =                                    * * *                                    =
 =                                                                             =
-=                                   版本 1.0                                  =
+=                                   版本 1.1                                  =
 ===============================================================================
 
-     TL;DR: 按 C-j (CTRL+j) 以直接跳至第一讲。
+     太长不看：按 C-j (CTRL+j) 以直接跳至第一讲。
      本教程大约花费 30 分钟。
 
      若任何时候你感到卡住，可以切换至 emacs 状态，为此使用：
@@ -24,12 +24,12 @@
      此教程设计上仅描述足够范围的命令，
      使你可轻松使用 Evil 加强的 Emacs 作为一个全用途的编辑器。
 
-     完成教程的大致时间是  25-30 分钟，
+     完成教程的大致时间是 25-30 分钟，
      取决于多少时间花在试验中。
 
-     教程中的命令会修改此文本。复制一份此文件，
-     使用其副本来练习（若你使用 "evil-tutor-mode"，
-     则这已经是一份副本了）。
+     教程中的命令会修改此文本。
+     你需要复制一份此文件，并使用其副本来练习；
+     但若你是半自动地进入此练习的，则这应当已经是一份副本了。
 
      请牢记，此教程被设置为以实践进行教学。
      这意味着你需要真的执行命令以正确地学习它们。
@@ -115,7 +115,7 @@
 
   4. 重复 2 到 4 步，直到句子变得正确。
 
----> The ccow jumpedd ovverr thhe mooon.
+---> 那头奶奶奶牛跃跃过了了月亮亮亮。
 
   5. 如果这一行已经变得正确了，移动到第 1 讲第 4 节。
 
@@ -140,6 +140,7 @@
 
 ---> There is text misng this .
 ---> There is some text missing from this line.
+（译：此行有某些消失的文本。）
 
   5. 当你已经对插入文本感到适应时，移动至下面的小结。
 
@@ -184,6 +185,7 @@
       若你进行了某些错误的输入，按 <ESC> 然后重来。
 
 ---> There are a some words fun that don't belong paper in this sentence.
+（译：这里有某些单词不属于这个句子。）
 
   5. 重复第 3 至 4 步，直到此句子已修正，
      然后移动到第 2 讲第 2 节。
@@ -199,13 +201,13 @@
 
   2. 将光标移动到下面以“--->”开头的行。
 
-  3. 将光标移至行内正确部分的结尾（在第一个 . 之后）。
+  3. 将光标移至行内正确部分的结尾（在第一个句号之后）。
 
   4. 按 d$ 以删除到行尾。
 
   注：其实直接用 D（注意这里是大写，所以要按 Shift+d）更加方便。
 
----> Somebody typed the end of this line twice. end of this line twice.
+---> 有人将这行句子的末尾输入了两次。输入了两次。
 
 
   5. 移动到第 2 讲第 3 节来了解发生了什么。
@@ -242,18 +244,18 @@
   考虑到整行删除的频次，Vim 的设计者（进而是 Evil 的）决定
   一次按两个 d 来删除一行会更容易。
 
-  1. 将光标移至下列短语的第二行。
+  1. 将光标移至下列短语的第 2 行。
   2. 按 dd 以删除此行。
   3. 现在移至第 4 行。
   4. 按 2dd （记得“数字-命令-对象”）来删除这两行。
 
-      1)  Roses are red,
-      2)  Mud is fun,
-      3)  Violets are blue,
-      4)  I have a car,
-      5)  Clocks tell time,
-      6)  Sugar is sweet
-      7)  And so are you.
+      1)  玫红火艳，
+      2)  泥趣无边，
+      3)  香堇紫然。
+      4)  我有车驾。
+      5)  钟报时刻，
+      6)  饴甜甚蜜，
+      7)  亦莫如君。
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -274,7 +276,7 @@
     你需要在加载 evil 之前妥善设置 evil-undo-system 的
     变量值，才能使用重做命令。
 
----> Fiix the errors oon thhis line and reeplace them witth undo.
+---> 修修复这行的错误并并并用撤销来重置它它它们。
 
   8. 这是很有用的命令。现在移动至第 2 讲的总结。
 
@@ -317,10 +319,10 @@
 
   5. 重复第 2 至 4 步，直到所有行都被放置为正确的顺序。
 
-     d) Can you learn too?
-     b) Violets are blue,
-     c) Intelligence is learned,
-     a) Roses are red,
+     d) 君亦能学乎？
+     b) 香堇蓝紫然。
+     c) 智由学中得，
+     a) 玫红火艳艳，
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -339,6 +341,7 @@
 
 --->  Whan this lime was tuoed in, someone presswd some wrojg keys!
 --->  When this line was typed in, someone pressed some wrong keys!
+（译：当这行被输入时，有人按了某些错误的按键！）
 
   5. 现在移动至第 3 讲第 3 节。
 
@@ -363,6 +366,7 @@
 
 ---> This lubw has a few wptfd that mrrf changing usf the change command.
 ---> This line has a few words that need changing using the change command.
+（译：这行有一些单词需要使用更改命令来更改。）
 
 注意 cw 不仅替换了单词，也使你进入了插入状态。
 
@@ -388,6 +392,7 @@
 
 ---> The end of this line needs some help to make it like the second.
 ---> The end of this line needs to be corrected using the  c$  command.
+（译：这行的末尾需要使用 c$ 命令来修正。）
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -447,9 +452,9 @@
 
   4. 如果你想向上搜索一个单词，使用 ? 而不是 / 。
 
----> When the search reaches the end of the buffer it will continue at the start.
+---> 当搜索到达了缓冲区的末尾，它将从头继续。
 
-  "errroor" is not the way to spell error;  errroor is an error.
+  "errroor" 不是拼写 error 的正确方法；errroor 是一个 error。
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -466,7 +471,7 @@
 
   4. 输入 % 来将光标移动回第一个括号上（通过匹配）。
 
----> This ( is a test line with ('s, ['s ] and {'s } in it. ))
+---> 这 ( 是一个测试行，具有 (、[、] 和 {、} 在其中。))
 
 注：这在调试一个程序中的未匹配括号时非常有用（包括 elisp）！
 
@@ -486,6 +491,7 @@
      此命令更改行内所有匹配的对象。
 
 ---> thee best time to see thee flowers is in thee spring.
+（译：赏花的最佳时机是春天。）
 
   4. 为了更改两行之间的所有字符串，
      输入 :#,#s/old/new/g ，其中 #,# 是这两行的行号。
@@ -664,6 +670,7 @@
 
 ---> This line will allow you to practice
 ---> This line will allow you to practice appending text to the end of a line.
+（译：这一行允许你练习在某一行的末尾附加文本。）
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -682,6 +689,7 @@
 
 ---> To make the first line the same as the last on this page use the keys.
 ---> To make the first line the same as the second, type R and the new text.
+（译：为了使第一行与第二行一致，输入 R 以及新的文本。）
 
   4. 注意当你按 <ESC> 以退出时，任何未改变的文本仍然保留。
 
@@ -701,17 +709,20 @@
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  Evil Tutor 在这里就结束了。它旨在给出 Emacs+Evil 编辑器的
-  一个简单的总览，刚好足够让你很轻松地使用这个编辑器。
+  Evil Tutor 在这里就结束了。它旨在给出 Emacs+Evil 编辑器的一个简单的总览，
+  刚好足够让你很轻松地使用这个编辑器。
   它远远不算完整，因为 Evil 还有很多其他命令。
   例如，用 v 可以进入视觉（visual）模式以进行选择，
   y 可以复制（yank），而 C-v 可以进行矩形编辑等。
   
+  历史：
+
   此教程原本由 Michael C. Pierce 和 Robert K. Ware（Colorado
   矿物学院）写成，想法源于 Charles Smith（Colorado 州立大学），
   电子邮箱：bware@mines.colorado.edu。
 
   为 Vim 改编：Bram Moolenaar。
+
   为 Emacs+Evil 改编（基于 vimtutor 1.5）：Sylvain Benner。
   
   为简体中文翻译、为提升质量而改编：clsty <ph-tyhu@outlook.com>。
