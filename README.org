@@ -20,9 +20,8 @@ An evil-tutor in Simplified Chinese.
 :END:
 
 ** 描述
-本项目是简体中文的 Emacs Evil 实践式教程。
-
-它并不仅是对 [[https://github.com/syl20bnr/evil-tutor][evil-tutor]] 的翻译，更是加入了一些改进与修正以提升质量。
+本项目是 Emacs Evil 的实践式教程，全面采用简体中文。
+- 本项目原本译自 [[https://github.com/syl20bnr/evil-tutor][evil-tutor]]，部分内容也直接来源于 [[https://github.com/vim/vim/blob/master/runtime/tutor/tutor][vimtutor]]，除翻译之外的主要工作是大量的内容扩充、功能改进、长期维护与细节的打磨优化。
 
 ** 安装
 从 MELPA 或 MELPA Stable 安装 evil-tutor-sc（注：它还具有两个依赖 [[https://www.emacswiki.org/emacs/Evil][evil]] 和 [[https://github.com/syl20bnr/evil-tutor][evil-tutor]]）即可正常使用本项目。
@@ -47,23 +46,24 @@ An evil-tutor in Simplified Chinese.
 注：一份可供 Emacs 新手使用的 Emacs 配置（包含了 evil、evil-collection 及 evil-tutor-sc 等）也可参考 [[https://github.com/clsty/arCNiso/tree/main/homebase/public/.emacs.d][arCNiso 中的 .emacs.d]] 。
 
 ** 使用
-在 Emacs 中：
+要进入教程（若上次教程会话存在，则继续此会话）：
 #+begin_example
 M-x evil-tutor-sc-start
 #+end_example
+#+begin_quote
 这会在临时目录 =evil-tutor-sc-working-directory=
-（对于 \ast{}nix 系统，默认为 =~/.emacs.d/.tutor-sc= ）创建一个工作文件，
-以便下次使用时恢复上次状态。
+（对于 \ast{}nix 系统，默认为 =~/.emacs.d/.tutor-sc= ）创建一个工作文件来保存会话。
+#+end_quote
 
-若需要恢复初始状态，可清理此目录。
+（无论上次教程会话是否存在）要进入一个全新的教程：
+#+begin_example
+M-x evil-tutor-sc-start-new
+#+end_example
 
 通过 =C-j= 与 =C-k= ，可在课程之间快速导航。
 
 ** 致谢
-本项目原本译自 [[https://github.com/syl20bnr/evil-tutor][evil-tutor]] 。
-
-部分内容也直接来源于 [[https://github.com/vim/vim/blob/master/runtime/tutor/tutor][vimtutor]]。
-
-=evil-tutor-sc.el= 代码源自 [[https://github.com/kenjimyzk/evil-tutor-ja][evil-tutor-ja.el]]。
-
-自述文档的目录由 [[https://github.com/alphapapa/org-make-toc][org-make-toc]] 辅助完成。
+- 本项目原本译自 [[https://github.com/syl20bnr/evil-tutor][evil-tutor]]。
+- 部分内容也直接来源于 [[https://github.com/vim/vim/blob/master/runtime/tutor/tutor][vimtutor]]。
+- =evil-tutor-sc.el= 代码源自 [[https://github.com/kenjimyzk/evil-tutor-ja][evil-tutor-ja.el]]。
+- 自述文档的目录由 [[https://github.com/alphapapa/org-make-toc][org-make-toc]] 辅助完成。

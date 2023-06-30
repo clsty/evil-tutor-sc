@@ -60,6 +60,21 @@
   (evil-mode))
 
 ;;;###autoload
+(defun evil-tutor-sc-reset ()
+  "Reset evil-tutor-sc session by cleaning previous working file."
+  (interactive)
+  (evil-tutor-sc-clean-working-file))
+
+;;;###autoload
+(defun evil-tutor-sc-start-new ()
+  "Start a new evil-tutor-sc session."
+  (interactive)
+  (evil-tutor-sc-clean-working-file)
+  (evil-tutor-sc-restore-or-create-working-file)
+  (evil-tutor-sc-mode)
+  (evil-mode))
+
+;;;###autoload
 (defalias 'evil-tutor-sc-resume #'evil-tutor-sc-start)
 
 (defun evil-tutor-sc-restore-or-create-working-file ()
@@ -87,6 +102,15 @@ be handled by minor modes."
            (insert-file-contents tutor-sc-file)
         (make-directory evil-tutor-sc-working-directory 'parents)
         (save-buffer 0)))))
+
+(defun evil-tutor-sc-clean-working-file ()
+  "Clean the working file if it exists in `evil-tutor-sc-working-directory'."
+  (let* ((files (if (file-exists-p evil-tutor-sc-working-directory)
+                    (directory-files evil-tutor-sc-working-directory t nil t)))
+         (previous-file (evil-tutor--find-first-working-file files)))
+    (if previous-file
+           (delete-file previous-file)
+      (message "No previous working-file to clean."))))
 
 (provide 'evil-tutor-sc)
 
