@@ -26,8 +26,8 @@ An evil-tutor in Simplified Chinese.
 ** 安装
 从 MELPA 或 MELPA Stable 安装 evil-tutor-sc（注：它还具有两个依赖 [[https://www.emacswiki.org/emacs/Evil][evil]] 和 [[https://github.com/syl20bnr/evil-tutor][evil-tutor]]）即可正常使用本项目。
 
-两者的区别是，在 MELPA 发布的是开发版，可能会包含施工区（未完成的部分），使用时只要无视施工区即可；在 MELPA Stable 发布的则是稳定版，不会包含施工区。
-
+两者的主要区别是，在 MELPA 发布的是最新的开发版，可能会包含施工区（未完成的部分），使用时只要无视施工区即可；在 MELPA Stable 发布的则是稳定版，不会包含施工区。
+#+begin_quote
 作为 MELPA 中的包，安装方法本来不必详述，但这里还是给出一段示例：
 #+begin_src elisp
   (require 'package) ; 加载 package.el
@@ -44,9 +44,10 @@ An evil-tutor in Simplified Chinese.
   (use-package evil-tutor-sc)
 #+end_src
 注：一份可供 Emacs 新手使用的 Emacs 配置（包含了 evil、evil-collection 及 evil-tutor-sc 等）也可参考 [[https://github.com/clsty/arCNiso/tree/main/homebase/public/.emacs.d][arCNiso 中的 .emacs.d]] 。
+#+end_quote
 
 ** 使用
-要进入教程（若上次教程会话存在，则继续此会话）：
+一、要进入教程（若上次教程会话存在，则继续此会话）：
 #+begin_example
 M-x evil-tutor-sc-start
 #+end_example
@@ -55,12 +56,12 @@ M-x evil-tutor-sc-start
 （对于 \ast{}nix 系统，默认为 =~/.emacs.d/.tutor-sc= ）创建一个工作文件来保存会话。
 #+end_quote
 
-（无论上次教程会话是否存在）要进入一个全新的教程：
+二、（无论上次教程会话是否存在）要进入一个全新的教程：
 #+begin_example
 M-x evil-tutor-sc-start-new
 #+end_example
 
-通过 =C-j= 与 =C-k= ，可在课程之间快速导航。
+三、通过 =C-j= 与 =C-k= ，可在课程之间快速导航。
 
 ** 致谢
 - 本项目原本译自 [[https://github.com/syl20bnr/evil-tutor][evil-tutor]]。
