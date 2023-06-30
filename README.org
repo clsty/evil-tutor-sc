@@ -25,7 +25,9 @@ An evil-tutor in Simplified Chinese.
 它并不仅是对 [[https://github.com/syl20bnr/evil-tutor][evil-tutor]] 的翻译，更是加入了一些改进与修正以提升质量。
 
 ** 安装
-从 MELPA 安装 evil-tutor-sc（注：它还具有两个依赖 [[https://www.emacswiki.org/emacs/Evil][evil]] 和 [[https://github.com/syl20bnr/evil-tutor][evil-tutor]]）即可正常使用本项目。
+从 MELPA 或 MELPA Stable 安装 evil-tutor-sc（注：它还具有两个依赖 [[https://www.emacswiki.org/emacs/Evil][evil]] 和 [[https://github.com/syl20bnr/evil-tutor][evil-tutor]]）即可正常使用本项目。
+
+两者的区别是，在 MELPA 发布的是开发版，可能会包含施工区（未完成的部分），使用时只要无视施工区即可；在 MELPA Stable 发布的则是稳定版，不会包含施工区。
 
 作为 MELPA 中的包，安装方法本来不必详述，但这里还是给出一段示例：
 #+begin_src elisp
@@ -50,7 +52,7 @@ An evil-tutor in Simplified Chinese.
 M-x evil-tutor-sc-start
 #+end_example
 这会在临时目录 =evil-tutor-sc-working-directory=
-（默认为 =~/.emacs.d/.tutor-sc= ）创建一个工作文件，
+（对于 \ast{}nix 系统，默认为 =~/.emacs.d/.tutor-sc= ）创建一个工作文件，
 以便下次使用时恢复上次状态。
 
 若需要恢复初始状态，可清理此目录。
