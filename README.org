@@ -1,4 +1,5 @@
 [[https://melpa.org/#/evil-tutor-sc][file:https://melpa.org/packages/evil-tutor-sc-badge.svg]]
+[[https://stable.melpa.org/#/evil-tutor-sc][file:https://stable.melpa.org/packages/evil-tutor-sc-badge.svg]]
 * evil-tutor-sc：简体中文的 Emacs Evil 实践式教程
 An evil-tutor in Simplified Chinese.
 ** Credits
