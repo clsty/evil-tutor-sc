@@ -1,4 +1,4 @@
-;;; evil-tutor-sc.el --- Simplified Chinese Evil-tutor
+;;; evil-tutor-sc.el --- Simplified Chinese tutor for Evil
 
 ;; Copyright (C) 2023 clsty
 ;;

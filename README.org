@@ -66,5 +66,5 @@ M-x evil-tutor-sc-start-new
 ** 致谢
 - 本项目原本译自 [[https://github.com/syl20bnr/evil-tutor][evil-tutor]]。
 - 部分内容也直接来源于 [[https://github.com/vim/vim/blob/master/runtime/tutor/tutor][vimtutor]]。
-- =evil-tutor-sc.el= 代码源自 [[https://github.com/kenjimyzk/evil-tutor-ja][evil-tutor-ja.el]]。
+- =evil-tutor-sc.el= 代码原本来自 [[https://github.com/kenjimyzk/evil-tutor-ja][evil-tutor-ja.el]]。
 - 自述文档的目录由 [[https://github.com/alphapapa/org-make-toc][org-make-toc]] 辅助完成。
