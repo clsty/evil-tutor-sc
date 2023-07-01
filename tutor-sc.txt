@@ -9,7 +9,8 @@
      太长不看：按 C-j (CTRL+j) 以直接跳至第一讲。
      本教程大约花费 30 分钟。
 
-     若任何时候你感到卡住，可以切换至 emacs 状态，为此使用：
+     若你已掌握 Emacs 的基本使用方法，
+     则当你感到卡住时，可以切换至 emacs 状态，为此使用：
      
            M-x evil-emacs-state RET
 
@@ -95,7 +96,7 @@
 
   3. 当你看到 shell 提示，回到 Emacs 并恢复你的教程会话，
      为此键入：
-                                  M-x evil-tutor-start
+                                  M-x evil-tutor-sc-start
 
   4. 若你自信已经记住了这些步骤，执行第 1 到 3 步，以退出并重进编辑器。
      之后向下移动光标至第 1 讲第 3 节。
@@ -252,10 +253,10 @@
       1)  玫红火艳，
       2)  泥趣无边，
       3)  香堇紫然。
-      4)  我有车驾。
+      4)  吾有车驾。
       5)  钟报时刻，
-      6)  饴甜甚蜜，
-      7)  亦莫如君。
+      6)  饴甜似蜜，
+      7)  亦复如君。
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -454,8 +455,9 @@
 
 ---> 当搜索到达了缓冲区的末尾，它将从开头继续。
 
-  "errroor" 不是拼写 error 的正确方法；errroor 是一个 error。
+  "errroor" 不是拼写 error 的正确方法；errroor 是一个 error Error。
 
+注：evil 默认为全小写的搜索忽略大小写；若你需要大小写敏感，可在末尾加 \C ，例如   /error\C
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         第 4 讲第 3 节：匹配括号（parentheses）搜索
@@ -733,157 +735,12 @@
 
   4. 命令 y 拉取（yank，即复制）文本，p 放置（put，即粘贴）文本。
 
-=======================================================
-=======================================================
-=======================================================
-=======================================================
-WIP AREA BEGINS HERE
-施工区开头
-
-以下部分正在施工，请先跳至结尾。
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			    Lesson 6.5: SET OPTION
-
-
-	  ** Set an option so a search or substitute ignores case **
-
-  1. Search for 'ignore' by entering:  /ignore <ENTER>
-     Repeat several times by pressing  n .
-
-  2. Set the 'ic' (Ignore case) option by entering:   :set ic
-
-  3. Now search for 'ignore' again by pressing  n
-     Notice that Ignore and IGNORE are now also found.
-
-  4. Set the 'hlsearch' and 'incsearch' options:  :set hls is
-
-  5. Now type the search command again and see what happens:  /ignore <ENTER>
-
-  6. To disable ignoring case enter:  :set noic
-
-NOTE:  To remove the highlighting of matches enter:   :nohlsearch
-NOTE:  If you want to ignore case for just one search command, use  \c
-       in the phrase:  /ignore\c <ENTER>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			       Lesson 6 SUMMARY
-
-  1. Type  o  to open a line BELOW the cursor and start Insert mode.
-     Type  O  to open a line ABOVE the cursor.
-
-  2. Type  a  to insert text AFTER the cursor.
-     Type  A  to insert text after the end of the line.
-
-  3. The  e  command moves to the end of a word.
-
-  4. The  y  operator yanks (copies) text,  p  puts (pastes) it.
-
-  5. Typing a capital  R  enters Replace mode until  <ESC>  is pressed.
-
-  6. Typing ":set xxx" sets the option "xxx".  Some options are:
-  	'ic' 'ignorecase'	ignore upper/lower case when searching
-	'is' 'incsearch'	show partial matches for a search phrase
-	'hls' 'hlsearch'	highlight all matching phrases
-     You can either use the long or the short option name.
-
-  7. Prepend "no" to switch an option off:   :set noic
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		       第 7 讲第 1 节：获取帮助
-
-
-		      ** 使用帮助系统 **
-
-  Emcas 具有一个丰富的帮助系统。
-  尝试以下三种来开始：
-	- 按 <HELP> 键（如果你有一个）
-	- 按 <F1> 键（如果你有一个）
-	- 输入   :help <ENTER>
-
-  Read the text in the help window to find out how the help works.
-  Type  CTRL-W CTRL-W   to jump from one window to another.
-  Type    :q <ENTER>    to close the help window.
-
-  You can find help on just about any subject, by giving an argument to the
-  ":help" command.  Try these (don't forget pressing <ENTER>):
-
-	:help w
-	:help c_CTRL-D
-	:help insert-index
-	:help user-manual
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		      Lesson 7.2: CREATE A STARTUP SCRIPT
-
-
-			  ** Enable Vim features **
-
-  Vim has many more features than Vi, but most of them are disabled by
-  default.  To start using more features you should create a "vimrc" file.
-
-  1. Start editing the "vimrc" file.  This depends on your system:
-	:e ~/.vimrc		for Unix
-	:e ~/_vimrc		for Windows
-
-  2. Now read the example "vimrc" file contents:
-	:r $VIMRUNTIME/vimrc_example.vim
-
-  3. Write the file with:
-	:w
-
-  The next time you start Vim it will use syntax highlighting.
-  You can add all your preferred settings to this "vimrc" file.
-  For more information type  :help vimrc-intro
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			     Lesson 7.3: COMPLETION
-
-
-	      ** Command line completion with CTRL-D and <TAB> **
-
-  1. Make sure Vim is not in compatible mode:  :set nocp
-
-  2. Look what files exist in the directory:  :!ls   or  :!dir
-
-  3. Type the start of a command:  :e
-
-  4. Press  CTRL-D  and Vim will show a list of commands that start with "e".
-
-  5. Type  d<TAB>  and Vim will complete the command name to ":edit".
-
-  6. Now add a space and the start of an existing file name:  :edit FIL
-
-  7. Press <TAB>.  Vim will complete the name (if it is unique).
-
-NOTE:  Completion works for many commands.  Just try pressing CTRL-D and
-       <TAB>.  It is especially useful for  :help .
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			       Lesson 7 SUMMARY
-
-
-  1. Type  :help  or press <F1> or <HELP>  to open a help window.
-
-  2. Type  :help cmd  to find help on  cmd .
-
-  3. Type  CTRL-W CTRL-W  to jump to another window.
-
-  4. Type  :q  to close the help window.
-
-  5. Create a vimrc startup script to keep your preferred settings.
-
-  6. When typing a  :  command, press CTRL-D to see possible completions.
-     Press <TAB> to use one completion.
-
-施工区末尾
-WIP AREA ENDS HERE
-=======================================================
-=======================================================
-=======================================================
-=======================================================
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   Evil Tutor 在这里就结束了。它旨在给出 Emacs+Evil 编辑器的一个简单的总览，
   刚好足够让你很轻松地使用这个编辑器。
   它远远不算完整，因为 Evil 还有很多其他命令。
+  比如，用于矩形编辑的 Ctrl+v。
   
   历史：
 
