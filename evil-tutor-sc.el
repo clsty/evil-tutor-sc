@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2023 clsty
 ;;
-;; Author: clsty <ph-tyhu@outlook.com>
+;; Author: clsty <celestial.y@outlook.com>
 ;; Keywords: convenience editing evil Chinese
 ;; Created: 14 June 2023
 ;; Version: 0.1

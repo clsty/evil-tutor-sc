@@ -3,7 +3,7 @@
 =                                                                             =
 =                                    * * *                                    =
 =                                                                             =
-=                                   版本 1.2(beta)                            =
+=                                   版本 1.2                                  =
 ===============================================================================
 
      太长不看：按 C-j (CTRL+j) 以直接跳至第一讲。
@@ -735,157 +735,6 @@
 
   4. 命令 y 拉取（yank，即复制）文本，p 放置（put，即粘贴）文本。
 
-=======================================================
-=======================================================
-=======================================================
-=======================================================
-WIP AREA BEGINS HERE
-施工区开头
-
-以下部分正在施工，请先跳至结尾。
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-此节的 set，evil 似乎有其它用处，而不支持直接使用。
-搜下 evil alternative for set hls
-搜下 evil alternative for set is
-搜下 evil alternative for set ic
-			    Lesson 6.5: SET OPTION
-
-
-	  ** Set an option so a search or substitute ignores case **
-
-  1. Search for 'ignore' by entering:  /ignore <ENTER>
-     Repeat several times by pressing  n .
-
-  2. Set the 'ic' (Ignore case) option by entering:   :set ic
-
-  3. Now search for 'ignore' again by pressing  n
-     Notice that Ignore and IGNORE are now also found.
-
-  4. Set the 'hlsearch' and 'incsearch' options:  :set hls is
-
-  5. Now type the search command again and see what happens:  /ignore <ENTER>
-
-  6. To disable ignoring case enter:  :set noic
-
-NOTE:  To remove the highlighting of matches enter:   :nohlsearch
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			       Lesson 6 SUMMARY
-
-  1. Type  o  to open a line BELOW the cursor and start Insert mode.
-     Type  O  to open a line ABOVE the cursor.
-
-  2. Type  a  to insert text AFTER the cursor.
-     Type  A  to insert text after the end of the line.
-
-  3. The  e  command moves to the end of a word.
-
-  4. The  y  operator yanks (copies) text,  p  puts (pastes) it.
-
-  5. Typing a capital  R  enters Replace mode until  <ESC>  is pressed.
-
-  6. Typing ":set xxx" sets the option "xxx".  Some options are:
-  	'ic' 'ignorecase'	ignore upper/lower case when searching
-	'is' 'incsearch'	show partial matches for a search phrase
-	'hls' 'hlsearch'	highlight all matching phrases
-     You can either use the long or the short option name.
-
-  7. Prepend "no" to switch an option off:   :set noic
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-找出 Emacs 的帮助系统如何使用，以及 Evil 是如何结合它的。
-		       第 7 讲第 1 节：获取帮助
-
-
-		      ** 使用帮助系统 **
-
-  Emcas 具有一个丰富的帮助系统。
-  尝试以下三种来开始：
-	- 按 <HELP> 键（如果你有一个）
-	- 按 <F1> 键（如果你有一个）
-	- 输入   :help <ENTER>
-
-  Read the text in the help window to find out how the help works.
-  Type  CTRL-W CTRL-W   to jump from one window to another.
-  Type    :q <ENTER>    to close the help window.
-
-  You can find help on just about any subject, by giving an argument to the
-  ":help" command.  Try these (don't forget pressing <ENTER>):
-
-	:help w
-	:help c_CTRL-D
-	:help insert-index
-	:help user-manual
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-这一部分显然是在说配置文件的事。说实在的，其实并不需要放在这样一个讲操作的实践教程里，可考虑直接忽略。
-		      Lesson 7.2: CREATE A STARTUP SCRIPT
-
-
-			  ** Enable Vim features **
-
-  Vim has many more features than Vi, but most of them are disabled by
-  default.  To start using more features you should create a "vimrc" file.
-
-  1. Start editing the "vimrc" file.  This depends on your system:
-	:e ~/.vimrc		for Unix
-	:e ~/_vimrc		for Windows
-
-  2. Now read the example "vimrc" file contents:
-	:r $VIMRUNTIME/vimrc_example.vim
-
-  3. Write the file with:
-	:w
-
-  The next time you start Vim it will use syntax highlighting.
-  You can add all your preferred settings to this "vimrc" file.
-  For more information type  :help vimrc-intro
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-这一部分也是挺啰嗦的，总之就是在minibuffer中的命令状态下可以用 Ctrl+D 补全，但实际上 TAB 也可以。
-			     Lesson 7.3: COMPLETION
-
-
-	      ** Command line completion with CTRL-D and <TAB> **
-
-  1. Make sure Vim is not in compatible mode:  :set nocp
-
-  2. Look what files exist in the directory:  :!ls   or  :!dir
-
-  3. Type the start of a command:  :e
-
-  4. Press  CTRL-D  and Vim will show a list of commands that start with "e".
-
-  5. Type  d<TAB>  and Vim will complete the command name to ":edit".
-
-  6. Now add a space and the start of an existing file name:  :edit FIL
-
-  7. Press <TAB>.  Vim will complete the name (if it is unique).
-
-NOTE:  Completion works for many commands.  Just try pressing CTRL-D and
-       <TAB>.  It is especially useful for  :help .
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			       Lesson 7 SUMMARY
-
-
-  1. Type  :help  or press <F1> or <HELP>  to open a help window.
-
-  2. Type  :help cmd  to find help on  cmd .
-
-  3. Type  CTRL-W CTRL-W  to jump to another window.
-
-  4. Type  :q  to close the help window.
-
-  5. Create a vimrc startup script to keep your preferred settings.
-
-  6. When typing a  :  command, press CTRL-D to see possible completions.
-     Press <TAB> to use one completion.
-
-施工区末尾
-WIP AREA ENDS HERE
-=======================================================
-=======================================================
-=======================================================
-=======================================================
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   Evil Tutor 在这里就结束了。它旨在给出 Emacs+Evil 编辑器的一个简单的总览，
@@ -908,7 +757,7 @@ WIP AREA ENDS HERE
   evil-tutor-sc 最初由 evil-tutor 翻译而来，
   也有部分内容来源于同期的 vimtutor。
   此外，作者也为提升质量而进行了一定的改编与扩充。
-  作者：clsty <ph-tyhu@outlook.com>。
+  作者：clsty <celestial.y@outlook.com>。
   项目地址：https://github.com/clsty/evil-tutor-sc
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
