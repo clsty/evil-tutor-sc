@@ -1,0 +1,10 @@
+# Compiled
+*.elc
+
+# Packaging
+*.cask
+
+*~
+
+gitignored.*
+/gitignored
