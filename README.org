@@ -27,7 +27,7 @@ An evil-tutor in Simplified Chinese.
 ** 安装
 从 MELPA 或 MELPA Stable 安装 evil-tutor-sc（注：它还具有两个依赖 [[https://www.emacswiki.org/emacs/Evil][evil]] 和 [[https://github.com/syl20bnr/evil-tutor][evil-tutor]]）即可正常使用本项目。
 
-两者的主要区别是，在 MELPA 发布的是最新的开发版，可能会包含施工区（未完成的部分），使用时只要无视施工区即可；在 MELPA Stable 发布的则是稳定版，不会包含施工区。
+两者的主要区别是，在 MELPA 发布的是最新的开发版，在 MELPA Stable 发布的则是稳定版。
 #+begin_quote
 作为 MELPA 中的包，安装方法本来不必详述，但这里还是给出一段示例：
 #+begin_src elisp
